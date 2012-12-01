@@ -56,4 +56,15 @@ abstract class Struct
     {
         throw new \OutOfRangeException("Unknown property \${$name}.");
     }
+
+    /**
+     * Reconstruct value state
+     *
+     * @param array $values
+     * @return Struct
+     */
+    public static function __set_state(array $values)
+    {
+        return new static($values);
+    }
 }
