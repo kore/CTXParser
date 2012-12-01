@@ -42,7 +42,7 @@ class Parser
      */
     public function parseString($string)
     {
-        $tokens = $this->tokenizer->tokenize($string);
+        $tokens = new Stack($this->tokenizer->tokenize($string));
 
         $ctx = new CTX();
         $this->reduceStruct($tokens, $ctx);
@@ -61,9 +61,9 @@ class Parser
      * @param Token[] $tokens
      * @return Token
      */
-    private function read(array $types, array &$tokens)
+    private function read(array $types, Stack $tokens)
     {
-        $token = array_shift($tokens);
+        $token = $tokens->shift();
 
         if (!in_array($token->type, $types, true)) {
             $names = array();
@@ -84,11 +84,11 @@ class Parser
     /**
      * Reduce struct
      *
-     * @param Token[] $tokens
+     * @param Stack $tokens
      * @param Struct $parent
      * @return void
      */
-    protected function reduceStruct(array &$tokens, Struct $parent)
+    protected function reduceStruct(Stack $tokens, Struct $parent)
     {
         $start = $this->read(array(Tokenizer::T_STRUCT_START), $tokens);
 
@@ -123,11 +123,11 @@ class Parser
     /**
      * Reduce value
      *
-     * @param Token[] $tokens
+     * @param Stack $tokens
      * @param Struct $parent
      * @return void
      */
-    protected function reduceValue(array &$tokens, Struct $parent)
+    protected function reduceValue(Stack $tokens, Struct $parent)
     {
         $token = $this->read(array(Tokenizer::T_VALUE), $tokens);
 
@@ -138,11 +138,11 @@ class Parser
     /**
      * Reduce array value
      *
-     * @param Token[] $tokens
+     * @param Stack $tokens
      * @param Struct $parent
      * @return void
      */
-    protected function reduceArrayValue(array &$tokens, Struct $parent)
+    protected function reduceArrayValue(Stack $tokens, Struct $parent)
     {
         $token = $this->read(array(Tokenizer::T_ARRAY_VALUE), $tokens);
 
