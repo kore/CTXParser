@@ -108,12 +108,12 @@ class Simplified extends Visitor
         $new->type          = $transaction->transactionText;
         $new->text          = (array) $transaction->purpose;
         $new->date          = gmmktime(
-           $transaction->date[0]->time[0]->hour,
-           $transaction->date[0]->time[0]->min,
-           $transaction->date[0]->time[0]->sec,
-           $transaction->date[0]->date[0]->month,
-           $transaction->date[0]->date[0]->day,
-           $transaction->date[0]->date[0]->year
+            $transaction->date[0]->time[0]->hour,
+            $transaction->date[0]->time[0]->min,
+            $transaction->date[0]->time[0]->sec,
+            $transaction->date[0]->date[0]->month,
+            $transaction->date[0]->date[0]->day,
+            $transaction->date[0]->date[0]->year
         );
         return $new;
     }
