@@ -12,5 +12,5 @@ use CTXParser\Struct;
  */
 class StatusList extends Struct
 {
-    public $status;
+    public $status = array();
 }

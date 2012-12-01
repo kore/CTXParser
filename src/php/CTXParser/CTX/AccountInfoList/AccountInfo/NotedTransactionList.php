@@ -12,5 +12,5 @@ use CTXParser\Struct;
  */
 class NotedTransactionList extends Struct
 {
-    public $notedTransaction;
+    public $notedTransaction = array();
 }

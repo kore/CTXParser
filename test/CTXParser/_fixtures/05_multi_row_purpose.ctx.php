@@ -162,7 +162,9 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
       array (
         0 => 
         CTXParser\CTX\AccountInfoList\AccountInfo\NotedTransactionList::__set_state(array(
-           'notedTransaction' => NULL,
+           'notedTransaction' => 
+          array (
+          ),
         )),
       ),
     )),
