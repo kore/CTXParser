@@ -1,0 +1,64 @@
+accountInfoList {
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="4149030305013196"
+    char accountName="Standard Privat"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="8"
+  } #accountInfo
+
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="272160342"
+    char accountName="Sichteinlagen"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="6"
+
+    statusList {
+      status {
+        int  time="1312891200"
+
+        notedBalance {
+          value {
+            char value="1065521%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1312891200"
+        } #notedBalance
+      } #status
+
+      status {
+        int  time="1313064000"
+
+        notedBalance {
+          value {
+            char value="1053177%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1313064000"
+        } #notedBalance
+      } #status
+
+      status {
+        int  time="1313409600"
+
+        notedBalance {
+          value {
+            char value="1052677%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1313409600"
+        } #notedBalance
+      } #status
+    } #statusList
+  } #accountInfo
+} #accountInfoList
