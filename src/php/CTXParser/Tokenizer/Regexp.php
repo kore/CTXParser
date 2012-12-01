@@ -43,6 +43,10 @@ class Regexp extends Tokenizer
             'type'  => self::T_VALUE,
             'match' => '(\\A(?P<type>int|char)\\s+(?P<name>[A-Za-z-]+)="(?P<value>[^"]+)"$)Sm'
         ),
+        array(
+            'type'  => self::T_ARRAY_VALUE,
+            'match' => '(\\A(?P<type>int|char)\\s+(?P<name>[A-Za-z-]+)="(?P<value>(?:[^"]+|",\\s*")+)"$)Sm'
+        ),
     );
 
     /**

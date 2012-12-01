@@ -1,0 +1,107 @@
+accountInfoList {
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="4149030305013196"
+    char accountName="Standard Privat"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="8"
+  } #accountInfo
+
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="272160342"
+    char accountName="Sichteinlagen"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="6"
+
+    statusList {
+      status {
+        int  time="1312891200"
+
+        notedBalance {
+          value {
+            char value="1065521%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1312891200"
+        } #notedBalance
+      } #status
+    } #statusList
+
+    transactionList {
+      transaction {
+        char localBankCode="42050001"
+        char localAccountNumber="272160342"
+        char localName="Nordmann"
+        char remoteBankCode="43250030"
+        char remoteAccountNumber="14007793"
+        char remoteName="DSC WANNE-EICKEL BADMINTON", "E.V"
+        int  uniqueId="0"
+        int  idForApplication="0"
+        int  groupId="0"
+
+        valutaDate {
+          date {
+            int  day="4"
+            int  month="10"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #valutaDate
+
+        date {
+          date {
+            int  day="4"
+            int  month="10"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #date
+
+        value {
+          char value="-2100%2F100"
+          char currency="EUR"
+        } #value
+
+        int  textKey="0"
+        int  textKeyExt="0"
+        char transactionKey="011"
+        int  transactionCode="5"
+        char transactionText="LASTSCHRIFT"
+        char primanota="9200"
+        char purpose="BEITRAG 00272 DSC WANNE-EIC", "NORDMANN KORE"
+        char period="unknown"
+        int  cycle="0"
+        int  executionDay="0"
+        char type="unknown"
+        char subType="unknown"
+        char status="unknown"
+        char charge="unknown"
+      } #transaction
+    } #TransactionList
+
+    notedTransactionList {
+    } #notedTransactionList
+  } #accountInfo
+} #accountInfoList

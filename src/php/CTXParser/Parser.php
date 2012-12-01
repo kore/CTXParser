@@ -106,6 +106,10 @@ class Parser
                     $this->reduceValue($tokens, $struct);
                     continue 2;
 
+                case Tokenizer::T_ARRAY_VALUE:
+                    $this->reduceArrayValue($tokens, $struct);
+                    continue 2;
+
                 default:
                     $this->read(array(Tokenizer::T_STRUCT_END), $tokens);
                     break 2;
@@ -134,6 +138,33 @@ class Parser
         $parent->$name = $this->getValue($token);
     }
 
+    /**
+     * Reduce array value
+     *
+     * @param Token[] $tokens
+     * @param Struct $parent
+     * @return void
+     */
+    protected function reduceArrayValue(array &$tokens, Struct $parent)
+    {
+        $token = $this->read(array(Tokenizer::T_ARRAY_VALUE), $tokens);
+
+        $name = $token->match['name'];
+        $parent->$name = array_map(
+            function($value) use ($token) {
+                return $this->getValue($token, $value);
+            },
+            preg_split('(",\\s*")', $token->match['value'])
+        );
+    }
+
+    /**
+     * Convert token value type
+     *
+     * @param Token $token
+     * @param string $value
+     * @return mixed
+     */
     protected function getValue(Token $token, $value = null)
     {
         $value = $value ?: $token->match['value'];

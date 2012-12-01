@@ -22,6 +22,7 @@ abstract class Tokenizer
         self::T_STRUCT_START => "T_STRUCT_START",
         self::T_STRUCT_END   => "T_STRUCT_END",
         self::T_VALUE        => "T_VALUE",
+        self::T_ARRAY_VALUE  => "T_ARRAY_VALUE",
     );
 
     /**
@@ -53,6 +54,11 @@ abstract class Tokenizer
      * Value
      */
     const T_VALUE         = 20;
+
+    /**
+     * Array Value
+     */
+    const T_ARRAY_VALUE   = 21;
 
     /**
      * Tokenize the input string
