@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+namespace CTXParser;
+
 require __DIR__ . '/../php/CTXParser/bootstrap.php';
 
 if (!isset($argv[1])) {
@@ -8,6 +10,30 @@ if (!isset($argv[1])) {
     exit(1);
 }
 
-$parser = new \CTXParser\Parser();
+$parser = new Parser();
 $transactions = $parser->parse($argv[1]);
+
+$visitor = new Visitor\Simplified();
+$simplified = $visitor->visit($transactions);
+
+foreach ($simplified->accounts as $account) {
+    echo $account->bankCode, " ", $account->accountNumber, " (", $account->accountName, ")", PHP_EOL;
+    echo "* ", $account->status->value, $account->status->currency, PHP_EOL;
+    echo "* Transactions:", PHP_EOL;
+
+    foreach ($account->notedTransactions as $transaction) {
+        var_dump($transaction);
+        echo "  - (", ")", PHP_EOL;
+    }
+
+    foreach ($account->transactions as $transaction) {
+        printf(
+            "  - [%s] %.2f %s %s" . PHP_EOL,
+            date( "d.m.Y - H:i", $transaction->date),
+            $transaction->value,
+            $transaction->currency,
+            $transaction->name
+        );
+    }
+}
 
