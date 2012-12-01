@@ -44,7 +44,7 @@ class Parser
     {
         $tokens = $this->tokenizer->tokenize($string);
 
-        $ctx = new Values\CTX();
+        $ctx = new CTX();
         $this->reduceStruct($tokens, $ctx);
 
         return $ctx->accountInfoList[0];

@@ -3,7 +3,7 @@
  * This file is part of CTX Parser
  */
 
-namespace CTXParser\Values\CTX;
+namespace CTXParser\CTX;
 
 use CTXParser\Struct;
 
