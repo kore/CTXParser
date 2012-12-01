@@ -40,4 +40,5 @@ class Transaction extends Struct
     public $subType;
     public $status;
     public $charge;
+    public $endToEndReference;
 }
