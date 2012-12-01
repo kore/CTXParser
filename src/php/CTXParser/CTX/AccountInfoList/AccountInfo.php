@@ -3,7 +3,7 @@
  * This file is part of CTX Parser
  */
 
-namespace CTXParser\Values;
+namespace CTXParser\CTX\AccountInfoList;
 
 use CTXParser\Struct;
 
@@ -20,4 +20,5 @@ class AccountInfo extends Struct
     public $currency;
     public $accountType;
     public $accountId;
+    public $statusList;
 }
