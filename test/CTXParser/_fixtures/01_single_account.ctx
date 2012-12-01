@@ -1,0 +1,12 @@
+accountInfoList {
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="4149030305013196"
+    char accountName="Standard Privat"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="8"
+  } #accountInfo
+} #accountInfoList

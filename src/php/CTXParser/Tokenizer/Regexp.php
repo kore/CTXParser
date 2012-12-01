@@ -35,6 +35,14 @@ class Regexp extends Tokenizer
             'type'  => self::T_STRUCT_END,
             'match' => '(\\A\\})S'
         ),
+        array(
+            'type'  => self::T_STRUCT_END,
+            'match' => '(\\A\\})S'
+        ),
+        array(
+            'type'  => self::T_VALUE,
+            'match' => '(\\A(?P<type>int|char)\\s+(?P<name>[A-Za-z-]+)="(?P<value>[^"]+)"$)Sm'
+        ),
     );
 
     /**

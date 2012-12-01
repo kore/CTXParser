@@ -21,6 +21,7 @@ abstract class Tokenizer
         self::T_EOF          => "T_EOF",
         self::T_STRUCT_START => "T_STRUCT_START",
         self::T_STRUCT_END   => "T_STRUCT_END",
+        self::T_VALUE        => "T_VALUE",
     );
 
     /**
@@ -47,6 +48,11 @@ abstract class Tokenizer
      * End of a struct
      */
     const T_STRUCT_END    = 11;
+
+    /**
+     * Value
+     */
+    const T_VALUE         = 20;
 
     /**
      * Tokenize the input string

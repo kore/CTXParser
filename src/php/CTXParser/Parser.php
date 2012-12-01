@@ -43,9 +43,11 @@ class Parser
     public function parseString($string)
     {
         $tokens = $this->tokenizer->tokenize($string);
-        $accountInfoList = $this->reduceStruct($tokens);
 
-        return $accountInfoList;
+        $ctx = new Values\CTX();
+        $this->reduceStruct($tokens, $ctx);
+
+        return $ctx->accountInfoList[0];
     }
 
     /**
@@ -72,7 +74,7 @@ class Parser
             }
 
             throw new \RuntimeException(
-                "Expected one of: " . implode( ', ', $names ) . ", found " . $this->tokenizer->getTokenName($token['type']) . ". in line {$token->line} at position {$token->position}."
+                "Expected one of: " . implode( ', ', $names ) . ", found " . $this->tokenizer->getTokenName($token->type) . ". in line {$token->line} at position {$token->position}."
             );
         }
 
@@ -83,15 +85,65 @@ class Parser
      * Reduce struct
      *
      * @param Token[] $tokens
-     * @return Struct
+     * @param Struct $parent
+     * @return void
      */
-    protected function reduceStruct(array $tokens)
+    protected function reduceStruct(array &$tokens, Struct $parent)
     {
         $start = $this->read(array(Tokenizer::T_STRUCT_START), $tokens);
-        $structClassName = __NAMESPACE__ . '\\Values\\' . ucfirst($start->match['name']);
-        $struct = new $structClassName();
-        $end = $this->read(array(Tokenizer::T_STRUCT_END), $tokens);
 
-        return $struct;
+        $name = $start->match['name'];
+        $structClassName = __NAMESPACE__ . '\\Values\\' . ucfirst($name);
+        $struct = new $structClassName();
+
+        while (true) {
+            switch ($tokens[0]->type) {
+                case Tokenizer::T_STRUCT_START:
+                    $this->reduceStruct($tokens, $struct);
+                    continue 2;
+
+                case Tokenizer::T_VALUE:
+                    $this->reduceValue($tokens, $struct);
+                    continue 2;
+
+                default:
+                    $this->read(array(Tokenizer::T_STRUCT_END), $tokens);
+                    break 2;
+            }
+        }
+
+        if (empty($parent->name)) {
+            $parent->$name = array($struct);
+        } else {
+            $parent->$name = array_merge($parent->name, array($struct));
+        }
+    }
+
+    /**
+     * Reduce value
+     *
+     * @param Token[] $tokens
+     * @param Struct $parent
+     * @return void
+     */
+    protected function reduceValue(array &$tokens, Struct $parent)
+    {
+        $token = $this->read(array(Tokenizer::T_VALUE), $tokens);
+
+        switch ($type = $token->match['type']) {
+            case 'int':
+                $value = (int) $token->match['value'];
+                break;
+            case 'char':
+                $value = (string) $token->match['value'];
+                break;
+            default:
+                throw new \RuntimeException(
+                    "Unknown value type $type in line {$token->line} at position {$token->position}."
+                );
+        }
+
+        $name = $token->match['name'];
+        $parent->$name = $value;
     }
 }
