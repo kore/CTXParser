@@ -13,7 +13,7 @@ accountInfoList {
   accountInfo {
     char bankCode="42050001"
     char bankName="Sparkasse Gelsenkirchen"
-    char accountNumber="272160342"
+    char accountNumber="123456789"
     char accountName="Sichteinlagen"
     char owner="Nordmann"
     char currency="EUR"
@@ -64,7 +64,7 @@ accountInfoList {
     transactionList {
       transaction {
         char localBankCode="42050001"
-        char localAccountNumber="272160342"
+        char localAccountNumber="123456789"
         char localName="Nordmann"
         char remoteBankCode="30030880"
         char remoteAccountNumber="1938073003"
@@ -128,7 +128,7 @@ accountInfoList {
 
       transaction {
         char localBankCode="42050001"
-        char localAccountNumber="272160342"
+        char localAccountNumber="123456789"
         char localName="Nordmann"
         char remoteBankCode="30030880"
         char remoteAccountNumber="1938073003"
@@ -192,7 +192,7 @@ accountInfoList {
 
       transaction {
         char localBankCode="42050001"
-        char localAccountNumber="272160342"
+        char localAccountNumber="123456789"
         char localName="Nordmann"
         char remoteBankCode="30050000"
         char remoteAccountNumber="1583319"
@@ -259,7 +259,7 @@ accountInfoList {
     notedTransactionList {
       notedTransaction {
         char localBankCode="42050001"
-        char localAccountNumber="272160342"
+        char localAccountNumber="123456789"
         char localName="Nordmann"
         int  uniqueId="0"
         int  idForApplication="0"

@@ -21,7 +21,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
     CTXParser\CTX\AccountInfoList\AccountInfo::__set_state(array(
        'bankCode' => '42050001',
        'bankName' => 'Sparkasse Gelsenkirchen',
-       'accountNumber' => '272160342',
+       'accountNumber' => '123456789',
        'accountName' => 'Sichteinlagen',
        'owner' => 'Nordmann',
        'currency' => 'EUR',
@@ -64,7 +64,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
             0 => 
             CTXParser\CTX\AccountInfoList\AccountInfo\TransactionList\Transaction::__set_state(array(
                'localBankCode' => '42050001',
-               'localAccountNumber' => '272160342',
+               'localAccountNumber' => '123456789',
                'localName' => 'Nordmann',
                'remoteBankCode' => '43250030',
                'remoteAccountNumber' => '14007793',
