@@ -93,7 +93,7 @@ class Parser
         $start = $this->read(array(Tokenizer::T_STRUCT_START), $tokens);
 
         $name = $start->match['name'];
-        $structClassName = __NAMESPACE__ . '\\Values\\' . ucfirst($name);
+        $structClassName = get_class($parent) . '\\' . ucfirst($name);
         $struct = new $structClassName();
 
         while (true) {
@@ -112,10 +112,10 @@ class Parser
             }
         }
 
-        if (empty($parent->name)) {
+        if (!is_array($parent->$name)) {
             $parent->$name = array($struct);
         } else {
-            $parent->$name = array_merge($parent->name, array($struct));
+            $parent->$name = array_merge($parent->$name, array($struct));
         }
     }
 

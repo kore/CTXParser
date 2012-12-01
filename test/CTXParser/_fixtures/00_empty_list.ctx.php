@@ -1,4 +1,5 @@
 <?php
 
-return CTXParser\Values\AccountInfoList::__set_state(array(
+return CTXParser\Values\CTX\AccountInfoList::__set_state(array(
+   'accountInfo' => NULL,
 ));
