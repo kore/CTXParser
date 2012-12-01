@@ -167,10 +167,13 @@ class Parser
         $value = $value ?: $token->match['value'];
         $type  = $token->match['type'];
 
-        switch ($type) {
-            case 'int':
+        switch (true) {
+            case $type === 'int':
                 return (int) $value;
-            case 'char':
+            case $type === 'char' &&
+                 preg_match('(^(?P<value>-?\\d+)%2F100$)', $value, $match):
+                return $match['value'] / 100;
+            case $type === 'char':
                 return (string) $value;
             default:
                 throw new \RuntimeException(

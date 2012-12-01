@@ -14,6 +14,8 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
        'accountType' => 0,
        'accountId' => 8,
        'statusList' => NULL,
+       'transactionList' => NULL,
+       'notedTransactionList' => NULL,
     )),
   ),
 ));

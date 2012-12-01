@@ -44,7 +44,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                   array (
                     0 => 
                     CTXParser\CTX\AccountInfoList\AccountInfo\StatusList\Status\NotedBalance\Value::__set_state(array(
-                       'value' => '1065521%2F100',
+                       'value' => 10655.21,
                        'currency' => 'EUR',
                     )),
                   ),
@@ -130,7 +130,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
               array (
                 0 => 
                 CTXParser\CTX\AccountInfoList\AccountInfo\TransactionList\Transaction\Value::__set_state(array(
-                   'value' => '-2100%2F100',
+                   'value' => -21,
                    'currency' => 'EUR',
                 )),
               ),

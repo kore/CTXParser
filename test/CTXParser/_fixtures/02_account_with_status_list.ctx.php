@@ -14,6 +14,8 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
        'accountType' => 0,
        'accountId' => 8,
        'statusList' => NULL,
+       'transactionList' => NULL,
+       'notedTransactionList' => NULL,
     )),
     1 => 
     CTXParser\CTX\AccountInfoList\AccountInfo::__set_state(array(
@@ -42,7 +44,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                   array (
                     0 => 
                     CTXParser\CTX\AccountInfoList\AccountInfo\StatusList\Status\NotedBalance\Value::__set_state(array(
-                       'value' => '1065521%2F100',
+                       'value' => 10655.21,
                        'currency' => 'EUR',
                     )),
                   ),
@@ -61,7 +63,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                   array (
                     0 => 
                     CTXParser\CTX\AccountInfoList\AccountInfo\StatusList\Status\NotedBalance\Value::__set_state(array(
-                       'value' => '1053177%2F100',
+                       'value' => 10531.77,
                        'currency' => 'EUR',
                     )),
                   ),
@@ -80,7 +82,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                   array (
                     0 => 
                     CTXParser\CTX\AccountInfoList\AccountInfo\StatusList\Status\NotedBalance\Value::__set_state(array(
-                       'value' => '1052677%2F100',
+                       'value' => 10526.77,
                        'currency' => 'EUR',
                     )),
                   ),
@@ -91,6 +93,8 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
           ),
         )),
       ),
+       'transactionList' => NULL,
+       'notedTransactionList' => NULL,
     )),
   ),
 ));
