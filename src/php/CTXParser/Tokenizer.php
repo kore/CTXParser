@@ -68,7 +68,7 @@ abstract class Tokenizer
      * @param string $string
      * @return Token[]
      */
-    abstract public function tokenize( $string );
+    abstract public function tokenize($string);
 
     /**
      * Get token name

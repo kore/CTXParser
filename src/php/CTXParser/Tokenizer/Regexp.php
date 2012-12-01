@@ -67,46 +67,46 @@ class Regexp extends Tokenizer
      * @param string $string
      * @return Token[]
      */
-    public function tokenize( $string )
+    public function tokenize($string)
     {
         $line     = 1;
         $position = 1;
         $tokens   = array();
 
-        while ( strlen( $string ) ) {
-            foreach ( $this->expressions as $rule ) {
-                if ( !preg_match( $rule['match'], $string, $match ) ) {
+        while (strlen($string)) {
+            foreach ($this->expressions as $rule) {
+                if (!preg_match($rule['match'], $string, $match)) {
                     continue;
                 }
 
                 // Remove matched string from input
-                $string = substr( $string, strlen( $match[0] ) );
+                $string = substr($string, strlen($match[0]));
 
                 // Update position in file
-                $line += substr_count( $match[0], "\n" );
-                if ( ( $pos = strrpos( $match[0], "\n" ) ) !== false ) {
-                    $position  = strrpos( $match[0], "\n" ) + 1;
+                $line += substr_count($match[0], "\n");
+                if (($pos = strrpos($match[0], "\n")) !== false) {
+                    $position  = strrpos($match[0], "\n") + 1;
                 } else {
-                    $position += strlen( $match[0] );
+                    $position += strlen($match[0]);
                 }
 
                 // Skip irrelevant rules
-                if ( in_array( $rule['type'], $this->ignoreTokens ) ) {
+                if (in_array($rule['type'], $this->ignoreTokens)) {
                     continue 2;
                 }
 
                 // Add all other rules including their match to the token array
                 $match = $this->removeNumericKeys($match);
-                $tokens[] = new Token( $rule['type'], $line, $position, $match );
+                $tokens[] = new Token($rule['type'], $line, $position, $match);
                 continue 2;
             }
 
             throw new \RuntimeException(
-                "Could not parse string: '" . substr( $string, 0, 20 ) . "' in line $line at position $position."
+                "Could not parse string: '" . substr($string, 0, 20) . "' in line $line at position $position."
             );
         }
 
-        $tokens[] = new Token( self::T_EOF, $line, $position, null );
+        $tokens[] = new Token(self::T_EOF, $line, $position, null);
         return $tokens;
     }
 

@@ -61,20 +61,20 @@ class Parser
      * @param Token[] $tokens
      * @return Token
      */
-    private function read( array $types, array &$tokens )
+    private function read(array $types, array &$tokens)
     {
-        $token = array_shift( $tokens );
+        $token = array_shift($tokens);
 
-        if ( !in_array( $token->type, $types, true ) )
-        {
+        if (!in_array($token->type, $types, true)) {
             $names = array();
-            foreach ( $types as $type )
-            {
+            foreach ($types as $type) {
                 $names[] = $this->tokenizer->getTokenName($type);
             }
 
             throw new \RuntimeException(
-                "Expected one of: " . implode( ', ', $names ) . ", found " . $this->tokenizer->getTokenName($token->type) . ". in line {$token->line} at position {$token->position}."
+                "Expected one of: " . implode(', ', $names) . ", found " .
+                $this->tokenizer->getTokenName($token->type) .
+                ". in line {$token->line} at position {$token->position}."
             );
         }
 
@@ -101,15 +101,12 @@ class Parser
                 case Tokenizer::T_STRUCT_START:
                     $this->reduceStruct($tokens, $struct);
                     continue 2;
-
                 case Tokenizer::T_VALUE:
                     $this->reduceValue($tokens, $struct);
                     continue 2;
-
                 case Tokenizer::T_ARRAY_VALUE:
                     $this->reduceArrayValue($tokens, $struct);
                     continue 2;
-
                 default:
                     $this->read(array(Tokenizer::T_STRUCT_END), $tokens);
                     break 2;
@@ -151,7 +148,7 @@ class Parser
 
         $name = $token->match['name'];
         $parent->$name = array_map(
-            function($value) use ($token) {
+            function ($value) use ($token) {
                 return $this->getValue($token, $value);
             },
             preg_split('(",\\s*")', $token->match['value'])
