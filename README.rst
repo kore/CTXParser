@@ -19,6 +19,8 @@ un-parsable CTX files please report issues with attached examples.
 You may also just add them unter ``test/CTXParser/_fixtures/`` and extend the
 parser accordingly.
 
+__ http://www.aquamaniac.de/sites/aqbanking/index.php
+
 
 ..
    Local Variables:
