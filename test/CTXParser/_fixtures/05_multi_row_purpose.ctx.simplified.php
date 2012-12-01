@@ -42,7 +42,7 @@ return CTXParser\Visitor\Simplified\AccountList::__set_state(array(
             0 => 'DSC WANNE-EICKEL BADMINTON',
             1 => 'E.V',
           ),
-           'date' => 1317729600,
+           'date' => 1317726000,
            'value' => -21,
            'currency' => 'EUR',
            'type' => 'LASTSCHRIFT',
