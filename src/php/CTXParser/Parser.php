@@ -130,20 +130,24 @@ class Parser
     {
         $token = $this->read(array(Tokenizer::T_VALUE), $tokens);
 
-        switch ($type = $token->match['type']) {
+        $name = $token->match['name'];
+        $parent->$name = $this->getValue($token);
+    }
+
+    protected function getValue(Token $token, $value = null)
+    {
+        $value = $value ?: $token->match['value'];
+        $type  = $token->match['type'];
+
+        switch ($type) {
             case 'int':
-                $value = (int) $token->match['value'];
-                break;
+                return (int) $value;
             case 'char':
-                $value = (string) $token->match['value'];
-                break;
+                return (string) $value;
             default:
                 throw new \RuntimeException(
                     "Unknown value type $type in line {$token->line} at position {$token->position}."
                 );
         }
-
-        $name = $token->match['name'];
-        $parent->$name = $value;
     }
 }
