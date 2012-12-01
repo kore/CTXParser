@@ -1,0 +1,19 @@
+{
+    "name": "kore/CTXParser",
+    "description": "Parser for CTX files",
+    "minimum-stability": "alpha",
+    "authors": [
+        {
+            "name": "Kore Nordmann",
+            "email": "mail@kore-nordmann.de"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "classmap": [
+            "src"
+        ]
+    }
+}
