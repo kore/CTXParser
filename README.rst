@@ -2,6 +2,11 @@
 CTX Parser
 ==========
 
+.. image::  https://secure.travis-ci.org/kore/CTXParser.png
+   :alt:    Travis Status
+   :target: https://secure.travis-ci.org/kore/CTXParser 
+   :align:  right
+
 Parser for CTX files, which are, for example, returned by aqbanking__.
 
 Usage::
