@@ -1,0 +1,6 @@
+.abc
+.pear
+build
+src/library/*
+build.properties.local
+src/config/config.ini
