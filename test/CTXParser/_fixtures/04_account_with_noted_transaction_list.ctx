@@ -1,0 +1,323 @@
+accountInfoList {
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="4149030305013196"
+    char accountName="Standard Privat"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="8"
+  } #accountInfo
+
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="272160342"
+    char accountName="Sichteinlagen"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="6"
+
+    statusList {
+      status {
+        int  time="1312891200"
+
+        notedBalance {
+          value {
+            char value="1065521%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1312891200"
+        } #notedBalance
+      } #status
+
+      status {
+        int  time="1313064000"
+
+        notedBalance {
+          value {
+            char value="1053177%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1313064000"
+        } #notedBalance
+      } #status
+
+      status {
+        int  time="1313409600"
+
+        notedBalance {
+          value {
+            char value="1052677%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1313409600"
+        } #notedBalance
+      } #status
+    } #statusList
+
+    transactionList {
+      transaction {
+        char localBankCode="42050001"
+        char localAccountNumber="272160342"
+        char localName="Nordmann"
+        char remoteBankCode="30030880"
+        char remoteAccountNumber="1938073003"
+        char remoteName="AMAZON SERVICES EUROPE SA"
+        int  uniqueId="0"
+        int  idForApplication="0"
+        int  groupId="0"
+
+        valutaDate {
+          date {
+            int  day="9"
+            int  month="8"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #valutaDate
+
+        date {
+          date {
+            int  day="9"
+            int  month="8"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #date
+
+        value {
+          char value="-689%2F100"
+          char currency="EUR"
+        } #value
+
+        int  textKey="0"
+        int  textKeyExt="0"
+        char transactionKey="011"
+        int  transactionCode="5"
+        char transactionText="LASTSCHRIFT"
+        char primanota="9262"
+        char purpose="2091190764468248"
+        char period="unknown"
+        int  cycle="0"
+        int  executionDay="0"
+        char type="unknown"
+        char subType="unknown"
+        char status="unknown"
+        char charge="unknown"
+      } #transaction
+
+      transaction {
+        char localBankCode="42050001"
+        char localAccountNumber="272160342"
+        char localName="Nordmann"
+        char remoteBankCode="30030880"
+        char remoteAccountNumber="1938073003"
+        char remoteName="AMAZON SERVICES EUROPE SA"
+        int  uniqueId="0"
+        int  idForApplication="0"
+        int  groupId="0"
+
+        valutaDate {
+          date {
+            int  day="9"
+            int  month="8"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #valutaDate
+
+        date {
+          date {
+            int  day="9"
+            int  month="8"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #date
+
+        value {
+          char value="-2350%2F100"
+          char currency="EUR"
+        } #value
+
+        int  textKey="0"
+        int  textKeyExt="0"
+        char transactionKey="011"
+        int  transactionCode="5"
+        char transactionText="LASTSCHRIFT"
+        char primanota="9262"
+        char purpose="1627550610015706"
+        char period="unknown"
+        int  cycle="0"
+        int  executionDay="0"
+        char type="unknown"
+        char subType="unknown"
+        char status="unknown"
+        char charge="unknown"
+      } #transaction
+
+      transaction {
+        char localBankCode="42050001"
+        char localAccountNumber="272160342"
+        char localName="Nordmann"
+        char remoteBankCode="30050000"
+        char remoteAccountNumber="1583319"
+        char remoteName="REWE MARKT FEIERTAG OHG"
+        int  uniqueId="0"
+        int  idForApplication="0"
+        int  groupId="0"
+
+        valutaDate {
+          date {
+            int  day="11"
+            int  month="8"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #valutaDate
+
+        date {
+          date {
+            int  day="11"
+            int  month="8"
+            int  year="2011"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #date
+
+        value {
+          char value="-12344%2F100"
+          char currency="EUR"
+        } #value
+
+        int  textKey="0"
+        int  textKeyExt="11"
+        char transactionKey="037"
+        char bankReference="100000254900"
+        int  transactionCode="6"
+        char transactionText="SONSTIGER EINZUG"
+        char primanota="9250"
+        char purpose="EC 65159373 100811123847OC3"
+        char period="unknown"
+        int  cycle="0"
+        int  executionDay="0"
+        char type="unknown"
+        char subType="unknown"
+        char status="unknown"
+        char charge="unknown"
+      } #transaction
+    } #TransactionList
+
+    notedTransactionList {
+      notedTransaction {
+        char localBankCode="42050001"
+        char localAccountNumber="272160342"
+        char localName="Nordmann"
+        int  uniqueId="0"
+        int  idForApplication="0"
+        int  groupId="0"
+
+        valutaDate {
+          date {
+            int  day="19"
+            int  month="11"
+            int  year="2012"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #valutaDate
+
+        date {
+          date {
+            int  day="19"
+            int  month="11"
+            int  year="2012"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #date
+
+        value {
+          char value="-3300%2F100"
+          char currency="EUR"
+        } #value
+
+        int  textKey="0"
+        int  textKeyExt="11"
+        char transactionKey="037"
+        char customerReference="161200030"
+        char bankReference="100000003337"
+        int  transactionCode="6"
+        char transactionText="SONSTIGER EINZUG"
+        char purpose="EC 68067326 191112133628 3"
+        char period="unknown"
+        int  cycle="0"
+        int  executionDay="0"
+        char type="unknown"
+        char subType="unknown"
+        char status="unknown"
+        char charge="unknown"
+      } #notedTransaction
+    } #notedTransactionList
+  } #accountInfo
+} #accountInfoList

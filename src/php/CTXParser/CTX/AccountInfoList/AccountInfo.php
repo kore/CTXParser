@@ -22,4 +22,5 @@ class AccountInfo extends Struct
     public $accountId;
     public $statusList;
     public $transactionList;
+    public $notedTransactionList;
 }
