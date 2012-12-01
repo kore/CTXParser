@@ -1,6 +1,7 @@
 .abc
 .pear
 build
-src/library/*
+vendor
+composer.phar
 build.properties.local
 src/config/config.ini
