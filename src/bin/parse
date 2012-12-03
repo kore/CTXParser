@@ -18,7 +18,10 @@ $simplified = $visitor->visit($transactions);
 
 foreach ($simplified->accounts as $account) {
     echo $account->bankCode, " ", $account->accountNumber, " (", $account->accountName, ")", PHP_EOL;
-    echo "* ", $account->status->value, $account->status->currency, PHP_EOL;
+
+    if ($account->status) {
+        echo "* ", $account->status->value, $account->status->currency, PHP_EOL;
+    }
     echo "* Transactions:", PHP_EOL;
 
     foreach ($account->notedTransactions as $transaction) {
@@ -32,7 +35,7 @@ foreach ($simplified->accounts as $account) {
             date( "d.m.Y - H:i", $transaction->date),
             $transaction->value,
             $transaction->currency,
-            $transaction->name
+            is_array($transaction->name) ? join(', ', $transaction->name) : $transaction->name
         );
     }
 }
