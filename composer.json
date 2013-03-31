@@ -1,19 +1,7 @@
 {
     "name": "kore/ctx-parser",
     "description": "Parser for CTX files",
-    "minimum-stability": "alpha",
-    "authors": [
-        {
-            "name": "Kore Nordmann",
-            "email": "mail@kore-nordmann.de"
-        }
-    ],
-    "require": {
-
-    },
     "autoload": {
-        "classmap": [
-            "src"
-        ]
+        "psr-0": { "CTXParser": "src/php/" }
     }
 }
