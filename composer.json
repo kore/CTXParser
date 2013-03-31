@@ -1,6 +1,7 @@
 {
     "name": "kore/ctx-parser",
     "description": "Parser for CTX files",
+    "license": "LGPL-3.0+",
     "autoload": {
         "psr-0": { "CTXParser": "src/php/" }
     }
