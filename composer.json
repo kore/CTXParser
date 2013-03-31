@@ -1,5 +1,5 @@
 {
-    "name": "kore/CTXParser",
+    "name": "kore/ctx-parser",
     "description": "Parser for CTX files",
     "minimum-stability": "alpha",
     "authors": [
