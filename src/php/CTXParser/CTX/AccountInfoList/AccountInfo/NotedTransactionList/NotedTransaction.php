@@ -40,4 +40,5 @@ class NotedTransaction extends Struct
     public $subType;
     public $status;
     public $charge;
+    public $endToEndReference;
 }
