@@ -43,7 +43,9 @@ abstract class Struct
      */
     public function __set($name, $value)
     {
-        throw new \OutOfRangeException("Unknown property \${$name} in " . get_class($this));
+        // We just trigger a warning here and do not throw an exception since
+        // new properties seem to occur from time to time.
+        trigger_error("Unknown property \${$name} in " . get_class($this));
     }
 
     /**
