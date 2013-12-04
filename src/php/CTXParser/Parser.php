@@ -178,7 +178,7 @@ class Parser
                  preg_match('(^(?P<value>-?\\d+)%2F100$)', $value, $match):
                 return $match['value'] / 100;
             case $type === 'char':
-                return (string) $value;
+                return (string) urldecode($value);
             default:
                 throw new \RuntimeException(
                     "Unknown value type $type in line {$token->line} at position {$token->position}."

@@ -1,0 +1,104 @@
+accountInfoList {
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="4149030305013196"
+    char accountName="Standard Privat"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="8"
+  } #accountInfo
+
+  accountInfo {
+    char bankCode="42050001"
+    char bankName="Sparkasse Gelsenkirchen"
+    char accountNumber="123456789"
+    char accountName="Sichteinlagen"
+    char owner="Nordmann"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="6"
+
+    statusList {
+      status {
+        int  time="1312891200"
+
+        notedBalance {
+          value {
+            char value="1065521%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1312891200"
+        } #notedBalance
+      } #status
+    } #statusList
+
+    transactionList {
+      transaction {
+        char localBankCode="42050001"
+        char localAccountNumber="272160342"
+        char localName="Nordmann"
+        char remoteBankCode="30050000"
+        char remoteAccountNumber="1609114"
+        char remoteName="ARAL BOCHUM WITTENER STRA%C3%9FE"
+        int  uniqueId="0"
+        int  idForApplication="0"
+        int  groupId="0"
+
+        valutaDate {
+          date {
+            int  day="14"
+            int  month="8"
+            int  year="2012"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #valutaDate
+
+        date {
+          date {
+            int  day="14"
+            int  month="8"
+            int  year="2012"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #date
+
+        value {
+          char value="-7699%2F100"
+          char currency="EUR"
+        } #value
+
+        int  textKey="0"
+        int  textKeyExt="0"
+        char transactionKey="011"
+        int  transactionCode="5"
+        char transactionText="LASTSCHRIFT"
+        char primanota="9250"
+        char purpose="100817583384343121214091200", "OLV71027569 10.08 17.58 ME3"
+        char period="unknown"
+        int  cycle="0"
+        int  executionDay="0"
+        char type="unknown"
+        char subType="unknown"
+        char status="unknown"
+        char charge="unknown"
+      } #transaction
+    } #TransactionList
+  } #accountInfo
+} #accountInfoList
