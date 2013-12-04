@@ -44,6 +44,10 @@ class Parser
     {
         $tokens = new Stack($this->tokenizer->tokenize($string));
 
+        if ($tokens[0]->type === Tokenizer::T_EOF) {
+            return new CTX\AccountInfoList();
+        }
+
         $ctx = new CTX();
         $this->reduceStruct($tokens, $ctx);
 
