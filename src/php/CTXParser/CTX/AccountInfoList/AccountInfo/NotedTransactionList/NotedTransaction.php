@@ -27,6 +27,9 @@ class NotedTransaction extends Struct
     public $textKey;
     public $textKeyExt;
     public $transactionKey;
+    public $endToEndReference;
+    public $mandateReference;
+    public $creditorIdentifier;
     public $customerReference;
     public $bankReference;
     public $transactionCode;
@@ -40,5 +43,4 @@ class NotedTransaction extends Struct
     public $subType;
     public $status;
     public $charge;
-    public $endToEndReference;
 }

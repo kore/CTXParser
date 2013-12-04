@@ -184,6 +184,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                'subType' => 'unknown',
                'status' => 'unknown',
                'charge' => 'unknown',
+               'endToEndReference' => NULL,
             )),
             1 => 
             CTXParser\CTX\AccountInfoList\AccountInfo\TransactionList\Transaction::__set_state(array(
@@ -270,6 +271,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                'subType' => 'unknown',
                'status' => 'unknown',
                'charge' => 'unknown',
+               'endToEndReference' => NULL,
             )),
             2 => 
             CTXParser\CTX\AccountInfoList\AccountInfo\TransactionList\Transaction::__set_state(array(
@@ -356,6 +358,7 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                'subType' => 'unknown',
                'status' => 'unknown',
                'charge' => 'unknown',
+               'endToEndReference' => NULL,
             )),
           ),
         )),
@@ -438,6 +441,9 @@ return CTXParser\CTX\AccountInfoList::__set_state(array(
                'textKey' => 0,
                'textKeyExt' => 11,
                'transactionKey' => '037',
+               'endToEndReference' => 'ZAHLUNGSBELEG 203114457774',
+               'mandateReference' => 'DE000205000610000000000000006952929',
+               'creditorIdentifier' => 'DE93ZZZ00000078611',
                'customerReference' => '161200030',
                'bankReference' => '100000003337',
                'transactionCode' => 6,
