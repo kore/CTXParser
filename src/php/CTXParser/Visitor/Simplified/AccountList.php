@@ -12,5 +12,5 @@ use CTXParser\Struct;
  */
 class AccountList extends Struct
 {
-    public $accounts;
+    public $accounts = array();
 }
