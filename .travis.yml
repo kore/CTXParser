@@ -3,4 +3,4 @@ language: php
 php:
   - 5.4
 
-script: ant
+script: ant -Dphpmd.enabled=false -Dpdepend.enabled=false -Dphpcpd.enabled=false -Dphploc.enabled=false
