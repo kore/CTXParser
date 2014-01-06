@@ -2,5 +2,6 @@ language: php
 
 php:
   - 5.4
+  - 5.5
 
 script: ant -Dphpmd.enabled=false -Dpdepend.enabled=false -Dphpcpd.enabled=false -Dphploc.enabled=false
