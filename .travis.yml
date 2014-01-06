@@ -4,4 +4,4 @@ php:
   - 5.4
   - 5.5
 
-script: ant -logger org.apache.tools.ant.NoBannerLogger -Dphpmd.enabled=false -Dpdepend.enabled=false -Dphpcpd.enabled=false -Dphploc.enabled=false
+script: ant -logger org.apache.tools.ant.NoBannerLogger -Dphpmd.enabled=false -Dpdepend.enabled=false -Dphpcpd.enabled=false -Dphploc.enabled=false -Dcodesniffer.enabled=false
